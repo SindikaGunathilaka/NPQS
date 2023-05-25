@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "00101be7-59b0-49bc-af0d-92a5af173a80",
+		"name": "NPQS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21425251"
+	},
+	"item": [
+		{
+			"name": "get-all-certificateNumbers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ3aXNod2FAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFEIn1dLCJpYXQiOjE2ODE5NjEyNDMsImV4cCI6MTY4MTk2MTM2M30.5ja5AQVwIy9YMbI8mycoMtl0mNLz298oi2ZXo7MWC76Bvlnp43UNZGQVRJ-oH8og",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/payment-request/v1/get-all-certificateNumbers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"payment-request",
+						"v1",
+						"get-all-certificateNumbers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Issue certificate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ3aXNod2FAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFEIn1dLCJpYXQiOjE2ODE5NjE2NjYsImV4cCI6MTY4MTk2MTc4Nn0.byHhYxhibSebcJzUScw51SkLxBnF422rRd7FdOJemY5f2YAi89UN8M61KXdZBZ6z",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"paymentRequestDetailId\": 357,\r\n        \"paymentRequestCertificateEntities\": [\r\n            {\r\n                \"certificateNumber\": \"98749872\",\r\n                \"status\": \"APPROVED\"\r\n            },\r\n            {\r\n                \"certificateNumber\": \"98749875\",\r\n                \"status\": \"REJECETD\"\r\n            }\r\n        ],\r\n        \"paymentRequestRejectedCertificateEntities\": [\r\n            {\r\n                \"certificateNumber\": \"98749878\"\r\n            }\r\n        ]\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/payment-request/v1/issue-certificate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"payment-request",
+						"v1",
+						"issue-certificate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
