@@ -70,6 +70,690 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "get-payment-details-for-report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRGlyZWN0b3IifV0sImlhdCI6MTY4NDk0MDg1OSwiZXhwIjoxNjg0OTQwOTc5fQ.oIqMOQXoEWduAZcByCLqjc7Q8gCX4n-T2b01zTvSFNunszdiLwIYnpG5rIGt0d9d",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/report/v1/get-payment-details-for-report?fromDate=2023-05-20&toDate=2023-05-24&serviceName&paymentMethod=ONLINE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"report",
+						"v1",
+						"get-payment-details-for-report"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "2023-05-20"
+						},
+						{
+							"key": "toDate",
+							"value": "2023-05-24"
+						},
+						{
+							"key": "serviceName",
+							"value": null
+						},
+						{
+							"key": "paymentMethod",
+							"value": "ONLINE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report/v1/get-by-transaction-id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmaS5qQGVseXNpYW5jcmVzdC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRW5kIFVzZXIifV0sImlhdCI6MTY3NTQyNTU2MSwiZXhwIjoxNjc1NDI1NjgxfQ.SMaXcYUcafLNol31-xRH68ZpP_btjdkJN7JTugdmfyxXKxauhd_b4zubqXY6exwB",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/report/v1/get-by-transaction-id/153687401",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"report",
+						"v1",
+						"get-by-transaction-id",
+						"153687401"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/update-status-by-userId",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmaS5qQGVseXNpYW5jcmVzdC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRW5kIFVzZXIifV0sImlhdCI6MTY3OTU2NjkxNCwiZXhwIjoxNjc5NTY3MDM0fQ.Yp7L3SbO6f79QC-MXHeMY8KjDudEQvs_cNF_T62Vme7cUPOh5CDtB8x2zC3a2d5-",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"status\":\"PENDING\",\r\n\"userId\":2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/user/update-status-by-userId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"user",
+						"update-status-by-userId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report/v1/get-receipt",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRGlyZWN0b3IifV0sImlhdCI6MTY4NDcyNDI4NCwiZXhwIjoxNjg0NzI0NDA0fQ.O-YYFapsTVg6JkpSQrYG7sVj6-cMxqb61PCKGD2q-eElJgK6WHcVA5y8ear40DTV",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/report/v1/get-receipt?paymentReqId=750&paymentMethod=ONLINE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"report",
+						"v1",
+						"get-receipt"
+					],
+					"query": [
+						{
+							"key": "paymentReqId",
+							"value": "750"
+						},
+						{
+							"key": "paymentMethod",
+							"value": "ONLINE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-count-by-status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0QGdhbWlsLmNvbSIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE2NzIxOTU2NDAsImV4cCI6MTY3MjE5NTc2MH0.ZkRJ1iP0L4liYbYY8vuBwHjE1KvbZTTgr0JXBtJDMaXWIXRGNA161MkYgAv0QoCS",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": [\r\n        \"EXPIRED\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/payment-request/v1/get-count-by-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"payment-request",
+						"v1",
+						"get-count-by-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bulk-payment/v1/get-by-status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmaGF0aGluaS5qQGVseXNpYW5jcmVzdC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRW5kIFVzZXIifV0sImlhdCI6MTY3MzA5MjE3MCwiZXhwIjoxNjczMDkyMjkwfQ.W_H2VQ1MNABKMAHx85IbJpmI8H7vFJxQJ87YdTmCm6GrJx9dmzVyPdktIs28MY15",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"page\":0,\r\n    \"size\":9,\r\n    \"status\":[\"ALL\"],\r\n    \"isAscending\":\"true\",\r\n    \"fromDate\":\"2023-04-01\",\r\n    \"toDate\":\"2023-09-10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/bulk-payment/v1/get-by-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"bulk-payment",
+						"v1",
+						"get-by-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bulk-payment/v1/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmaS5qQGVseXNpYW5jcmVzdC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRW5kIFVzZXIifV0sImlhdCI6MTY3MzExNjYzOSwiZXhwIjoxNjczMTE2NzU5fQ.lxkR9rCebJ9QOSQQwhsVGi2LAl7ufZt--_Cvqr2mNAYVpMtNkpT6NlpHxPCTZIW9",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"isExternal\": \"true\",\r\n    \"fee\": \"1200\",\r\n    \"paymentType\": \"INTERNAL\",\r\n    \"paymentDetailList\": [\r\n        {\r\n            \"orderId\": \"058096\",\r\n            \"amount\": \"1200\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gzipo1nge9.execute-api.us-east-1.amazonaws.com/bulk-payment/v1/create",
+					"protocol": "https",
+					"host": [
+						"gzipo1nge9",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"bulk-payment",
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get IPG payment Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmaGF0aGluaS5qQGVseXNpYW5jcmVzdC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRW5kIFVzZXIifV0sImlhdCI6MTY3Mjc0OTkwOSwiZXhwIjoxNjcyNzUwMDI5fQ._LSimBH59an0sDtXLCXngVMDuMchNgL7_TLgKYszb5mMdpRit_GGezkZiM9at7F0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/bulk-payment/v1/get-by-id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"bulk-payment",
+						"v1",
+						"get-by-id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get payment Request Details by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmaGF0aGluaS5qQGVseXNpYW5jcmVzdC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRW5kIFVzZXIifV0sImlhdCI6MTY3Mjc0OTg1NCwiZXhwIjoxNjcyNzQ5OTc0fQ.VlGSxKN3-sSivy-OV4BABt0ZhNM6S8ET-dk025HYuXCF07yn4tIhA-lPD7j63wgI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/payment-request/v1/get-by-id/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"payment-request",
+						"v1",
+						"get-by-id",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_key_details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmaGF0aGluaS5qQGVseXNpYW5jcmVzdC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRW5kIFVzZXIifV0sImlhdCI6MTY3Mjc1NTQyNCwiZXhwIjoxNjcyNzU1NTQ0fQ.h-YAAI1FmWpmpyV0kSjjxWRXNy08N-GXwDSXLfPltjaG3jt4mBhvS_T0YAtSzpb4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/signature/v1/get_key_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"signature",
+						"v1",
+						"get_key_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_signature",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmaGF0aGluaS5qQGVseXNpYW5jcmVzdC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRW5kIFVzZXIifV0sImlhdCI6MTY3Mjc1NTQ3NiwiZXhwIjoxNjcyNzU1NTk2fQ.jPpWkygOfuI7kNyi7UYSks7Ane7XsgR22dVXrjcC8iJspqPr2hyWc17Lrm2U4ck6",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"access_key\": \"581accd2e25a3c22a5b6f5ee8b93456d\",\r\n    \"profile_id\": \"595C1367-5A39-45B8-A31B-3D56DACD9479\",\r\n    \"transaction_uuid\": \"632062c19f62c\",\r\n    \"signed_field_names\":\"hhh\",\r\n    \"unsigned_field_names\":\"\",\r\n    \"signed_date_time\": \"\",\r\n    \"locale\" :\"\",\r\n    \"transaction_type\" :\"\",\r\n    \"reference_number\" :\"\",\r\n    \"auth_trans_ref_no\" :\"\",\r\n    \"amount\":\"\",\r\n    \"currency\":\"\",\r\n    \"bill_to_email\" :\"bb\",\r\n    \"bill_to_forename\" :\"bb\",\r\n    \"bill_to_surname\" :\"bb\",\r\n    \"bill_to_address_line1\" :\"aaa\",\r\n    \"bill_to_address_city\":\"bb\",\r\n    \"bill_to_address_country\" :\"bb\",\r\n    \"submit\":\"\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/signature/v1/get_signature",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"signature",
+						"v1",
+						"get_signature"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report/v1/get-payment-details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRGlyZWN0b3IifV0sImlhdCI6MTY4MjQxNTMyNCwiZXhwIjoxNjgyNDE1NDQ0fQ.o4oOgvlJmmmVOVrrwA1utY6mQGZCge6-zggJ4vx3uQvh-9IBUJ5KqUcCs9Kwmbxs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n    \"status\":[\"PENDING\"],\r\n    \"fromDate\":\"2022-01-20\",\r\n    \"toDate\":\"2023-05-24\",\r\n    \"orderId\": \"\",\r\n    \"serviceName\" : \"\",\r\n    \"identityNumber\" : \"\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/report/v1/get-payment-details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"report",
+						"v1",
+						"get-payment-details"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-by-status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmaGF0aGluaS5qQGVseXNpYW5jcmVzdC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRW5kIFVzZXIifV0sImlhdCI6MTY3MzA5NDUyOSwiZXhwIjoxNjczMDk0NjQ5fQ.b3wNgzj61EbUbUVt_SVFDdRBCGg3YUcxDAJ7N49UBn42W-1GzvsJ_sO6nuiDgapt",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"page\": 0,\r\n    \"size\": 10,\r\n    \"status\": [\r\n        \"PENDING\"\r\n    ],\r\n    \"userId\": 1,\r\n    \"isAscending\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/payment-request/v1/get-by-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"payment-request",
+						"v1",
+						"get-by-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invoice",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmaS5qQGVseXNpYW5jcmVzdC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRW5kIFVzZXIifV0sImlhdCI6MTY3NDYyNzQ1MCwiZXhwIjoxNjc0NjI3NTcwfQ.IJxyuNzxA93q-jYrt1th8uT8Z2jAgQLpDtoqGbX9eMRG3OtWTPWCMVWIkNoWq_v-",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"page\": 0,\r\n    \"size\": 25,\r\n    \"status\": [\r\n        \"PAID\"\r\n    ],\r\n    \"isAscending\": false,\r\n    \"fromDate\": \"2022-11-27\",\r\n    \"toDate\": \"2023-01-25\",\r\n    \"orderId\": \"\",\r\n    \"serviceName\": \"\",\r\n    \"identityNumber\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gzipo1nge9.execute-api.us-east-1.amazonaws.com/report/v1/get-by-transaction-id/676695936",
+					"protocol": "https",
+					"host": [
+						"gzipo1nge9",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"report",
+						"v1",
+						"get-by-transaction-id",
+						"676695936"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/get-for-management",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbnVzaGFAZWNvby5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRE8ifV0sImlhdCI6MTY3NDE5Mjk2NSwiZXhwIjoxNjc0MTkzMDg1fQ.dWVeKCUk3AwfoJeZRL2ECB6cKmXCPU4HZ4zgbSBvLveH2y3YdGrE2pF1N8bgacJv",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"page\":0,\r\n    \"size\":2,\r\n    \"isAscending\":false,\r\n    \"fromDate\":\"2022-10-11\",\r\n    \"toDate\":\"2023-02-04\",\r\n    \"identityNumber\":\"991111654V\",\r\n    \"registrationType\": \"PERSONAL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/user/get-for-management",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"user",
+						"get-for-management"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbnVzaGFAZWNvby5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRE8ifV0sImlhdCI6MTY3NDE5Mjk2NSwiZXhwIjoxNjc0MTkzMDg1fQ.dWVeKCUk3AwfoJeZRL2ECB6cKmXCPU4HZ4zgbSBvLveH2y3YdGrE2pF1N8bgacJv",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identityNumber\": \"991111654V\",\r\n    \"isActive\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/user/update-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"user",
+						"update-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment checked accountant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbnVzaGFAZWNvby5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRE8ifV0sImlhdCI6MTY3NDE5MzEzMCwiZXhwIjoxNjc0MTkzMjUwfQ.euUZfHGPIuVuWs-jadQYh8mxkT3_eeptPlxYMa631Mk25JvJPKGdsVoU0gTkXYLu",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paymentRequestIdList\":[3],\r\n    \"status\":\"CHECKED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/payment-request/v1/expire",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"payment-request",
+						"v1",
+						"expire"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download-excel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmaS5qQGVseXNpYW5jcmVzdC5jb20iLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiRW5kIFVzZXIifV0sImlhdCI6MTY3NTM0MTkwMiwiZXhwIjoxNjc1MzQyMDIyfQ.zff77CMyJjHcnwbPzmhwGohBj39zakaKbzlMsbQ8lx2KJWxNfim4ozxJvxVbLxcm",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n    \"status\":[\"PENDING\"],\r\n    \"fromDate\":\"2022-01-20\",\r\n    \"toDate\":\"2023-01-24\",\r\n    \"orderId\": \"\",\r\n    \"serviceName\" : \"\",\r\n    \"identityNumber\" : \"\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/npqs-core/report/v1/get-payment-details/download-excel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"npqs-core",
+						"report",
+						"v1",
+						"get-payment-details",
+						"download-excel"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
